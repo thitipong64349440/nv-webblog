@@ -10,7 +10,20 @@ app.get('/status', function (req,res){
 
 })
 
- 
+app.get('/hello/:person', function (req,res) {
+    console.log('hello - ' + req.params.person)
+    res.send('sey hello with ' + req.params.person)
+   })
+
+   // get user by id
+app.get('/user/:userId', function (req, res) {
+    res.send('ดูข้อมูลผู้ใช้งาน')
+   })
+   // get all user
+   app.get('/users', function (req, res) {
+    res.send('เรียกข้อมูลผใู้ชง้านทั้งงัหมด')
+   })
+
 
 let port = 8081
 
